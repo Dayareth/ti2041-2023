@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Publicaciones Recientes</h2>
+    <ul>
+        {% for publicacion in publicaciones %}
+            <li>
+                <h3><a href="#">{{ publicacion.titulo }}</a></h3>
+                <p>Autor: {{ publicacion.autor.username }}</p>
+                <p>{{ publicacion.contenido }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
