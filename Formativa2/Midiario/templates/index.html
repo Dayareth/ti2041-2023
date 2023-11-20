@@ -12,7 +12,7 @@
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         h1 {
-            color:rgb(4, 74, 84);
+            color:brown;
         }
     </style>
     <title>Mi Diario de Vida</title>
@@ -26,7 +26,7 @@
             {% endblock %}
         </h1>
     </div>
-    <hr class="hr" />
+<hr class="hr" />
     <div class="container">
         {% block content %}
             {% if publicaciones %}
@@ -49,5 +49,13 @@
             {% endif %}
         {% endblock %}
     </div>
+    <hr class="hr" />
+    <div class="container">
+        {% block footer %}
+            Creador por laquetecuento<sup>&copy;</sup>. Todos los derechos reservados.
+        {% endblock %}
+    </div>
+    <hr class="hr" />
 </body>
 </html>
+   
