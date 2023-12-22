@@ -11,7 +11,15 @@ def base(request,id=None):
     publicaciones = Post.objects.all().order_by('-fecha').values()
 
     if id is not None:
-        publicacion.actual = Post.objects.get(id = id)
+        Publicacion_actual = Post.objects.get(id = id)
+    else:
+        Publicacion_actual =publicaciones[0]
+        id = Publicacion_actual ['id']
+
+        Categoria = Categoria.objects.get(id = Publicacion_actual['Categoria_id'])
+        Etiqueta = Etiqueta.objects.filter(Post_id = id)
+
+    context = {}
 
 
     
