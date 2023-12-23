@@ -1,5 +1,5 @@
 from ninja import NinjaAPI, Redoc, Query
-from api.models import Service, Contact, Address, Provider
+from services.models import Service, Contact, Address, Provider
 from django.contrib.auth.models import User
 from .models import ServiceInputSchema, ServiceOutputSchema, ProviderOutputSchema, MessageSchema
 from typing import List
